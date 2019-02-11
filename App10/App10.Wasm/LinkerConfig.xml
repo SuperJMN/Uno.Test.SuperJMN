@@ -3,12 +3,11 @@
   <assembly fullname="Uno.UI" />
 
   <assembly fullname="System.Core">
-	<!-- This is required by JSon.NET and any expression.Compile caller -->
-	<type fullname="System.Linq.Expressions*" />
+    <type fullname="System.Linq.Expressions*" />
+  </assembly>
 
   <assembly fullname="System">
     <type fullname="System.*Converter" />
   </assembly>
 
-  </assembly>
 </linker>
