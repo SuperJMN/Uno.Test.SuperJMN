@@ -114,9 +114,6 @@
     <BundleResource Include="Resources\Fonts\winjs-symbols.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging.Console">
-      <Version>1.1.1</Version>
-    </PackageReference>
     <PackageReference Include="Uno.ReactiveUI">
       <Version>8.0.0-uno.156</Version>
     </PackageReference>

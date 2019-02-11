@@ -20,7 +20,7 @@ namespace App10.Shared.ViewModel
                 {
                     Name = "Mario",
                     Number = 11,
-                    Image = new Uri("ms-appx:///mario.png", UriKind.Absolute)
+                    Image = new Uri("mario.png", UriKind.Relative)
                 },
                 new Item
                 {
@@ -32,13 +32,13 @@ namespace App10.Shared.ViewModel
                 {
                     Name = "Toad",
                     Number = 11,
-                    Image = new Uri("ms-appx:///toad.png", UriKind.Absolute)
+                    Image = new Uri("toad.png", UriKind.Relative)
                 },
                 new Item
                 {
                     Name = "Princess Peach",
                     Number = 11,
-                    Image = new Uri("ms-appx:///peach.png", UriKind.Absolute)
+                    Image = new Uri("peach.png", UriKind.Relative)
                 }
             };
         }

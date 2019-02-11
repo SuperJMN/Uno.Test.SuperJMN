@@ -32,7 +32,6 @@
     <PackageReference Include="Uno.ReactiveUI" Version="8.0.0-uno.156" />
     <PackageReference Include="Uno.UI" Version="1.43.0-dev.806" />
     <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.192" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
     <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.0-dev.137" />
   </ItemGroup>
   <Import Project="..\App10.Shared\App10.Shared.projitems" Label="Shared" Condition="Exists('..\App10.Shared\App10.Shared.projitems')" />
