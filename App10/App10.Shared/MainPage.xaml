@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="App10.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:App10.Shared.ViewModel"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="ItemDataTemplate" x:DataType="viewModel:Item">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="{Binding Name}" />
+                <Image Grid.Column="1" Height="100" Source="{Binding Image}" />                        
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <viewModel:MainViewModel />
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{Binding Title}" Margin="20" FontSize="30" />
+        <ComboBox HorizontalAlignment="Stretch" Grid.Row="1" ItemsSource="{Binding MyItems}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" ItemTemplate="{StaticResource ItemDataTemplate}"></ComboBox>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListView Width="300" HorizontalAlignment="Left" ItemsSource="{Binding MyItems}"
+                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                      ItemTemplate="{StaticResource ItemDataTemplate}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+            <Image Grid.Column="1" Source="ms-appx:///mario.png" />
+        </Grid>
+        
+    </Grid>
+</Page>
